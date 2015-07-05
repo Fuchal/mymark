@@ -1,93 +1,86 @@
-win7 mingw64 boost1.58 é…ç½®ç¼–è¯‘
+win7 mingw64 boost1.58 ÅäÖÃ±àÒë
 ===
-<br>  
-ä¸‹è½½å¹¶å®‰è£…mingw64, http://sourceforge.net/projects/mingw-w64/<br>
-ä¸‹è½½å¹¶å®‰è£…msys64, http://sourceforge.net/projects/msys2<br>  
-ä¸‹è½½å¹¶è§£å‹boost1.58, http://www.boost.org/<br>  
+
+###Èí¼ş×¼±¸£º
+    ÏÂÔØ²¢°²×°mingw64, http://sourceforge.net/projects/mingw-w64/
+    ÏÂÔØ²¢°²×°msys64, http://sourceforge.net/projects/msys2
+    ÏÂÔØ²¢½âÑ¹boost1.58, http://www.boost.org/
+  
 
 
-æ¥¼ä¸»çš„å®‰è£…è·¯å¾„ï¼š<br>  
- mingw64 =ã€‹ c:\mingw64<br>  
- msys64 =ã€‹ c:\mingw64\msys64<br>  
- boost1.58 =ã€‹ c:\mingw64\inlucde\boost<br>  
+######Â¥Ö÷µÄ°²×°Â·¾¶£º
+    mingw64 =¡· c:\mingw64
+    msys64 =¡· c:\mingw64\msys64
+    boost1.58 =¡· c:\mingw64\inlucde\boost
 
-<br>  
-é…ç½®ç¯å¢ƒå˜é‡ï¼š<br>  
-C_INCLUDEDE_PATH     || C:\mingw64\include;C:\mingw64\x86_64-w64-mingw32\include<br>  
+###ÅäÖÃ»·¾³±äÁ¿£º
+    C_INCLUDEDE_PATH     || C:\mingw64\include;C:\mingw64\x86_64-w64-mingw32\include;
 
-CPLUS_INCLUDE_PATH || C:\mingw64\include;C:\mingw64\x86_64-w64-mingw32\include;C:\mingw64\x86_64-w64-mingw32\include\c++;<br>  
+    CPLUS_INCLUDE_PATH   || C:\mingw64\include;C:\mingw64\x86_64-w64-mingw32\include;C:\mingw64\x86_64-w64-mingw32\include\c++;
 
-Path                                  || è¿½åŠ C:\mingw64\bin;<br>  
+    Path                 || ×·¼ÓC:\mingw64\bin;
+
+<br>
 
 
-é…ç½®å¥½ä¸Šé¢ï¼Œå¯ä»¥è¯•ä¸€ä¸‹æ˜¯å¦èƒ½ç”¨g++æ¥ç¼–è¯‘æ™®é€šçš„c++ç¨‹åºï¼Œè¿™é‡Œå°±ä¸è¯¦ç»†ä»‹ç»<br>  
+    ÅäÖÃºÃÉÏÃæ£¬¿ÉÒÔÊÔÒ»ÏÂÊÇ·ñÄÜÓÃg++À´±àÒëÆÕÍ¨µÄc++³ÌĞò£¬ÕâÀï¾Í²»ÏêÏ¸½éÉÜ
 
-ç°åœ¨å¼€å§‹boostç¼–è¯‘æµç¨‹ï¼Œè¿™é‡Œéœ€è¦ msys64ç¯å¢ƒï¼Œå®‰è£…ï¼Œç„¶åè¿›å»64shell<br>  
+###ÏÖÔÚ¿ªÊ¼boost±àÒëÁ÷³Ì£¬ÕâÀïĞèÒª msys64»·¾³£¬°²×°£¬È»ºó½øÈ¥64shell<br>  
 
-c:\mingw64\inlucde\boost<br>  
+cd c:\mingw64\inlucde\boost
 
-å†æ‰§è¡Œ<br>  
+    ÔÙÖ´ĞĞ
 
 ./bootstrap.sh --with-toolset=mingw  
 
-å†æ‰§è¡Œ<br>  
+    ÔÙÖ´ĞĞ
 
 ./b2 variant=release link=shared threading=multi runtime-link=shared --with-thread --with-system --with-signals --with-regex
 
 
-æœ€åå°±æ˜¯ç­‰å¾…ç¼–è¯‘äº†ï¼Œæœ€åè¾“å‡ºå†…å®¹ä¸ºï¼š<br>  
+    ×îºó¾ÍÊÇµÈ´ı±àÒëÁË£¬×îºóÊä³öÄÚÈİÎª:
 
-The Boost C++ Libraries were successfully built!
+    The Boost C++ Libraries were successfully built!
 
-The following directory should be added to compiler include paths:
+    The following directory should be added to compiler include paths:
 
-    C:/mingw64/include/boost
+        C:/mingw64/include/boost
 
-The following directory should be added to linker library paths:
+    The following directory should be added to linker library paths:
 
-    C:\mingw64\include\boost\stage\lib
+        C:\mingw64\include\boost\stage\lib
     
 
-<br>  
-ä¹Ÿå°±æ˜¯è¯´å¤´æ–‡ä»¶åœ¨ C:/mingw64/include/boost
-<br>  
-ç¼–è¯‘å‡ºæ¥çš„åŠ¨æ€åº“æ–‡ä»¶åœ¨ C:\mingw64\include\boost\stage\lib
 
-<br>  
-æ³¨ï¼š--with-xxxè¿™é‡Œæ¥¼ä¸»æ˜¯ä¸ºéšä¾¿ç¼–è¯‘å‡ ä¸ªæ¥è¯•è¯•ï¼Œå¯ä»¥æŒ‰å®é™…éœ€è¦åŠ å…¥ç›¸å…³çš„åº“
+    Ò²¾ÍÊÇËµÍ·ÎÄ¼şÔÚ C:/mingw64/include/boost
 
-<br>  
-ç„¶åæŠŠddlç»“å°¾åœ¨æ”¾åˆ°C:\mingw64\bin, å› ä¸ºæˆ‘ä»¬çš„pathé…ç½®åœ¨è¿™é‡Œï¼Œæ”¾åˆ°è¿™é‡Œæ–¹ä¾¿ç¼–è¯‘åŠ¨æ€åº“å’Œæ‰§è¡Œæ—¶æ‰¾åˆ°ç›¸å…³çš„æ–‡ä»¶
-
-<br>  
-PSï¼šb2å’Œbjamæ˜¯ä¸€æ ·çš„ä¸œè¥¿ï¼Œè¿™é‡Œåˆ—äº†ä¸€ä¸‹ç›¸å…³çš„å‚æ•°
-<br>  
- --build-dir=<builddir>        ç¼–è¯‘çš„ä¸´æ—¶æ–‡ä»¶ä¼šæ”¾åœ¨builddiré‡Œ(è¿™æ ·æ¯”è¾ƒå¥½ç®¡ç†ï¼Œç¼–è¯‘å®Œå°±å¯ä»¥æŠŠå®ƒåˆ é™¤äº†) 
- <br>  
---stagedir=<stagedir>          å­˜æ”¾ç¼–è¯‘ååº“æ–‡ä»¶çš„è·¯å¾„ï¼Œé»˜è®¤æ˜¯stage 
-<br>  
---build-type=complete          ç¼–è¯‘æ‰€æœ‰ç‰ˆæœ¬ï¼Œä¸ç„¶åªä¼šç¼–è¯‘ä¸€å°éƒ¨åˆ†ç‰ˆæœ¬ï¼ˆç¡®åˆ‡åœ°è¯´æ˜¯ç›¸å½“äº:variant=release, threading=multi;link=shared|static;runtime-link=sharedï¼‰ 
-<br>  
-variant=debug|release          å†³å®šç¼–è¯‘ä»€ä¹ˆç‰ˆæœ¬(Debug or Release?) 
-<br>  
-link=static|shared             å†³å®šä½¿ç”¨é™æ€åº“è¿˜æ˜¯åŠ¨æ€åº“ã€‚ 
-<br>  
-threading=single|multi         å†³å®šä½¿ç”¨å•çº¿ç¨‹è¿˜æ˜¯å¤šçº¿ç¨‹åº“ã€‚ 
-<br>  
-runtime-link=static|shared     å†³å®šæ˜¯é™æ€è¿˜æ˜¯åŠ¨æ€é“¾æ¥C/C++æ ‡å‡†åº“ã€‚ 
-<br>  
---with-<library>               åªç¼–è¯‘æŒ‡å®šçš„åº“ï¼Œå¦‚è¾“å…¥--with-regexå°±åªç¼–è¯‘regexåº“äº†ã€‚ 
-<br>  
---show-libraries               æ˜¾ç¤ºéœ€è¦ç¼–è¯‘çš„åº“åç§°
+    ±àÒë³öÀ´µÄ¶¯Ì¬¿âÎÄ¼şÔÚ C:\mingw64\include\boost\stage\lib
 
 
-<br>  
-å‚è€ƒï¼š
-<br>  
-http://www.boost.org/doc/libs/1_58_0/more/getting_started/unix-variants.html
-<br>  
-http://blog.csdn.net/asb2010/article/details/43055391
-<br>  
-http://blog.csdn.net/yasi_xi/article/details/8660549 ;
-<br>  
-http://www.360doc.com/content/11/0128/15/59141_89586432.shtml ;
+    ×¢£º--with-xxxÕâÀïÂ¥Ö÷ÊÇÎªËæ±ã±àÒë¼¸¸öÀ´ÊÔÊÔ£¬¿ÉÒÔ°´Êµ¼ÊĞèÒª¼ÓÈëÏà¹ØµÄ¿â
+
+
+###È»ºó°Ñddl½áÎ²ÔÚ·Åµ½C:\mingw64\bin, ÒòÎªÎÒÃÇµÄpathÅäÖÃÔÚÕâÀï£¬·Åµ½ÕâÀï·½±ã±àÒë¶¯Ì¬¿âºÍÖ´ĞĞÊ±ÕÒµ½Ïà¹ØµÄÎÄ¼ş
+
+
+###PS£ºb2ºÍbjamÊÇÒ»ÑùµÄ¶«Î÷£¬ÕâÀïÁĞÁËÒ»ÏÂÏà¹ØµÄ²ÎÊı
+	--build-dir=<builddir>        ±àÒëµÄÁÙÊ±ÎÄ¼ş»á·ÅÔÚbuilddirÀï(ÕâÑù±È½ÏºÃ¹ÜÀí£¬±àÒëÍê¾Í¿ÉÒÔ°ÑËüÉ¾³ıÁË) 
+	--stagedir=<stagedir>          ´æ·Å±àÒëºó¿âÎÄ¼şµÄÂ·¾¶£¬Ä¬ÈÏÊÇstage 
+	--build-type=complete          ±àÒëËùÓĞ°æ±¾£¬²»È»Ö»»á±àÒëÒ»Ğ¡²¿·Ö°æ±¾£¨È·ÇĞµØËµÊÇÏàµ±ÓÚ:variant=release, threading=multi;link=shared|static;runtime-link=shared£©variant=debug|release          ¾ö¶¨±àÒëÊ²Ã´°æ±¾(Debug or Release?) 
+	link=static|shared             ¾ö¶¨Ê¹ÓÃ¾²Ì¬¿â»¹ÊÇ¶¯Ì¬¿â¡£ 
+	threading=single|multi         ¾ö¶¨Ê¹ÓÃµ¥Ïß³Ì»¹ÊÇ¶àÏß³Ì¿â¡£ 
+	runtime-link=static|shared     ¾ö¶¨ÊÇ¾²Ì¬»¹ÊÇ¶¯Ì¬Á´½ÓC/C++±ê×¼¿â¡£ 
+	--with-<library>               Ö»±àÒëÖ¸¶¨µÄ¿â£¬ÈçÊäÈë--with-regex¾ÍÖ»±àÒëregex¿âÁË¡£ 
+	--show-libraries               ÏÔÊ¾ĞèÒª±àÒëµÄ¿âÃû³Æ
+
+
+###²Î¿¼£º
+	http://www.boost.org/doc/libs/1_58_0/more/getting_started/unix-variants.html
+	http://blog.csdn.net/asb2010/article/details/43055391
+	http://blog.csdn.net/yasi_xi/article/details/8660549
+	http://www.360doc.com/content/11/0128/15/59141_89586432.shtml
+	
+	
+	
+	Àı×Ó£¬²Î¿¼scriptÄ¿Â¼ÉÏµÄtboost.cpp£¬È»ºóÖ´ĞĞ
+g++  -Ic:\mingw64\include\boost .\tboost.cpp -o tboost -Lc:\mingw64\bin -llibboost_regex-mgw51-mt-1_58
