@@ -1,3 +1,2 @@
 # mymark
-Learning Articles To Mark
-test
+这是学习过程中遇到的问题记录和总结
