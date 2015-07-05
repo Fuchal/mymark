@@ -1,8 +1,11 @@
 win7 mingw64 boost1.58 配置编译
 
 下载并安装mingw64, http://sourceforge.net/projects/mingw-w64/
+
 下载并安装msys64, http://sourceforge.net/projects/msys2
+
 下载并解压boost1.58, http://www.boost.org/
+
 
 楼主的安装路径：
  mingw64 =》 c:\mingw64
